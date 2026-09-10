@@ -1,0 +1,75 @@
+---
+const activities = [
+  {
+    title: "Jornadas de esterilización",
+    description:
+      "Apoyamos el traslado de mascotas que necesitan acudir a jornadas de esterilización.",
+  },
+  {
+    title: "Atención veterinaria",
+    description:
+      "Facilitamos el traslado de perros y gatos hacia centros y clínicas veterinarias.",
+  },
+  {
+    title: "Actividades comunitarias",
+    description:
+      "Participamos en iniciativas orientadas al bienestar y cuidado responsable de las mascotas.",
+  },
+];
+---
+
+<section class="bg-gray-50 py-20">
+  <div class="mx-auto max-w-7xl px-6">
+
+    <!-- Encabezado -->
+    <div class="max-w-2xl">
+      <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">
+        Actividades
+      </span>
+
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
+        Más que un servicio, nos importa su bienestar
+      </h2>
+
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        Conoce algunas de las actividades y acciones en las que participamos.
+      </p>
+    </div>
+
+
+    <!-- Actividades -->
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+      {
+        activities.map((activity) => (
+          <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
+
+            <div class="flex h-48 items-center justify-center bg-gray-200">
+              <span class="text-5xl">🐾</span>
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                {activity.title}
+              </h3>
+
+              <p class="mt-3 leading-7 text-gray-600">
+                {activity.description}
+              </p>
+
+              <a
+                href="#"
+                class="mt-5 inline-block font-semibold text-gray-900 hover:underline"
+              >
+                Ver más →
+              </a>
+            </div>
+
+          </article>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
