@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { activities } from "../data/activities.js";
+---
+
+<Layout title="Actividades | Transportes Perrin">
+
+  <Header />
+
+  <main>
+
+    <!-- Encabezado -->
+    <section class="bg-gray-50 py-20">
+      <div class="mx-auto max-w-4xl px-6 text-center">
+
+        <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">
+          Actividades
+        </span>
+
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
+          Participamos por el bienestar de las mascotas
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Conoce algunas de las actividades e iniciativas relacionadas
+          con el cuidado responsable de perros y gatos.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Lista de actividades -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-6">
+
+        <div class="grid gap-8 md:grid-cols-3">
+
+          {
+            activities.map((activity) => (
+              <article class="overflow-hidden rounded-2xl border border-gray-200">
+
+                <div class="flex h-56 items-center justify-center bg-gray-100">
+                  <span class="text-6xl">🐾</span>
+                </div>
+
+                <div class="p-8">
+
+                  <h2 class="text-2xl font-semibold text-gray-900">
+                    {activity.title}
+                  </h2>
+
+                  <p class="mt-4 leading-7 text-gray-600">
+                    {activity.description}
+                  </p>
+
+                </div>
+
+              </article>
+            ))
+          }
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>

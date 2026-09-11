@@ -1,3 +1,7 @@
+---
+import { services } from "../data/services.js";
+---
+
 <section class="bg-white py-20">
   <div class="mx-auto max-w-7xl px-6">
 
@@ -22,61 +26,37 @@
     <!-- Tarjetas -->
     <div class="mt-12 grid gap-6 md:grid-cols-3">
 
-      <!-- Servicio 1 -->
-      <article class="rounded-2xl border border-gray-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
+      {
+        services.slice(0, 3).map((service) => (
+          <article class="rounded-2xl border border-gray-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
 
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100">
-          🐕
-        </div>
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100">
+              🐾
+            </div>
 
-        <h3 class="mt-6 text-xl font-semibold text-gray-900">
-          Transporte veterinario
-        </h3>
+            <h3 class="mt-6 text-xl font-semibold text-gray-900">
+              {service.title}
+            </h3>
 
-        <p class="mt-3 leading-7 text-gray-600">
-          Transportamos a tus mascotas hacia consultas veterinarias,
-          tratamientos y otros servicios relacionados con su bienestar.
-        </p>
+            <p class="mt-3 leading-7 text-gray-600">
+              {service.description}
+            </p>
 
-      </article>
+          </article>
+        ))
+      }
 
+    </div>
 
-      <!-- Servicio 2 -->
-      <article class="rounded-2xl border border-gray-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
+    <!-- Enlace -->
+    <div class="mt-10 text-center">
 
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100">
-          🚐
-        </div>
-
-        <h3 class="mt-6 text-xl font-semibold text-gray-900">
-          Traslados programados
-        </h3>
-
-        <p class="mt-3 leading-7 text-gray-600">
-          Coordinamos el traslado de tus mascotas de acuerdo con
-          tus necesidades y horarios.
-        </p>
-
-      </article>
-
-
-      <!-- Servicio 3 -->
-      <article class="rounded-2xl border border-gray-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
-
-        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100">
-          ❤️
-        </div>
-
-        <h3 class="mt-6 text-xl font-semibold text-gray-900">
-          Transporte responsable
-        </h3>
-
-        <p class="mt-3 leading-7 text-gray-600">
-          Nos preocupamos por ofrecer un servicio responsable,
-          procurando que cada mascota viaje con el cuidado que merece.
-        </p>
-
-      </article>
+      <a
+        href="/servicios"
+        class="font-semibold text-gray-900 hover:underline"
+      >
+        Ver todos los servicios →
+      </a>
 
     </div>
 

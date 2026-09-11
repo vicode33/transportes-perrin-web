@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { services } from "../data/services.js";
+---
+
+<Layout title="Servicios | Transportes Perrin">
+
+  <Header />
+
+  <main>
+
+    <!-- Encabezado -->
+    <section class="bg-gray-50 py-20">
+      <div class="mx-auto max-w-4xl px-6 text-center">
+
+        <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">
+          Servicios
+        </span>
+
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
+          Soluciones para el traslado de tu mascota
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Ofrecemos diferentes alternativas de transporte para facilitar
+          el cuidado y bienestar de perros y gatos.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- Servicios -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-6">
+
+        <div class="grid gap-6 md:grid-cols-2">
+
+          {
+            services.map((service) => (
+              <article class="rounded-2xl border border-gray-200 p-8 transition hover:-translate-y-1 hover:shadow-lg">
+
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-100">
+                  🐾
+                </div>
+
+                <h2 class="mt-6 text-2xl font-semibold text-gray-900">
+                  {service.title}
+                </h2>
+
+                <p class="mt-4 leading-7 text-gray-600">
+                  {service.description}
+                </p>
+
+              </article>
+            ))
+          }
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>
