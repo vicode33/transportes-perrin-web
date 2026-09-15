@@ -1,17 +1,95 @@
-<header class="border-b">
+<header class="border-b bg-white">
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-    <a href="/" class="text-xl font-bold">
+    <!-- Logo / Nombre -->
+    <a href="/" class="text-xl font-bold text-gray-900">
       Transportes Perrin
     </a>
 
-    <div class="flex gap-6">
-      <a href="/" class="hover:text-gray-500">Inicio</a>
-      <a href="/nosotros" class="hover:text-gray-500">Nosotros</a>
-      <a href="/servicios" class="hover:text-gray-500">Servicios</a>
-      <a href="/actividades" class="hover:text-gray-500">Actividades</a>
-      <a href="/contacto" class="hover:text-gray-500">Contacto</a>
+    <!-- Menú escritorio -->
+    <div class="hidden items-center gap-6 md:flex">
+
+      <a href="/" class="hover:text-gray-500">
+        Inicio
+      </a>
+
+      <a href="/nosotros" class="hover:text-gray-500">
+        Nosotros
+      </a>
+
+      <a href="/servicios" class="hover:text-gray-500">
+        Servicios
+      </a>
+
+      <a href="/actividades" class="hover:text-gray-500">
+        Actividades
+      </a>
+
+      <a href="/contacto" class="hover:text-gray-500">
+        Contacto
+      </a>
+
     </div>
 
+
+    <!-- Botón móvil -->
+    <button
+      id="menu-button"
+      type="button"
+      class="rounded-lg p-2 text-gray-700 hover:bg-gray-100 md:hidden"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
   </nav>
+
+
+  <!-- Menú móvil -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t bg-white px-6 py-4 md:hidden"
+  >
+
+    <div class="flex flex-col gap-4">
+
+      <a href="/" class="hover:text-gray-500">
+        Inicio
+      </a>
+
+      <a href="/nosotros" class="hover:text-gray-500">
+        Nosotros
+      </a>
+
+      <a href="/servicios" class="hover:text-gray-500">
+        Servicios
+      </a>
+
+      <a href="/actividades" class="hover:text-gray-500">
+        Actividades
+      </a>
+
+      <a href="/contacto" class="hover:text-gray-500">
+        Contacto
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <script>
+    const button = document.querySelector("#menu-button");
+    const menu = document.querySelector("#mobile-menu");
+
+    button?.addEventListener("click", () => {
+      menu?.classList.toggle("hidden");
+
+      const isOpen = !menu?.classList.contains("hidden");
+
+      button?.setAttribute("aria-expanded", String(isOpen));
+    });
+  </script>
+
 </header>
