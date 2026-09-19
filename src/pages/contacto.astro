@@ -5,40 +5,39 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Contacto | Transportes Perrin">
-
   <Header />
 
   <main>
-
     <!-- Encabezado -->
     <section class="bg-gray-50 py-20">
       <div class="mx-auto max-w-4xl px-6 text-center">
-
-        <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">
+        <span
+          class="text-sm font-semibold uppercase tracking-wider text-gray-500"
+        >
           Contacto
         </span>
 
-        <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
+        <h1
+          class="mt-4 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl"
+        >
           Estamos para ayudarte
         </h1>
 
         <p class="mt-6 text-lg leading-8 text-gray-600">
-          ¿Necesitas transportar a tu mascota? Comunícate con nosotros
-          y coordinemos el traslado.
+          ¿Necesitas transportar a tu mascota? Comunícate con nosotros y
+          coordinemos el traslado.
         </p>
-
       </div>
     </section>
-
 
     <!-- Contacto -->
     <section class="bg-white py-20">
       <div class="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
-
         <!-- Información -->
         <div>
-
-          <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-gray-500"
+          >
             Información
           </span>
 
@@ -47,22 +46,20 @@ import Footer from "../components/Footer.astro";
           </h2>
 
           <p class="mt-5 leading-7 text-gray-600">
-            Escríbenos para consultar disponibilidad, coordinar un traslado
-            o solicitar información sobre nuestros servicios.
+            Escríbenos para consultar disponibilidad, coordinar un traslado o
+            solicitar información sobre nuestros servicios.
           </p>
-
 
           <!-- WhatsApp -->
           <div class="mt-8 flex items-start gap-4">
-
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100"
+            >
               📱
             </div>
 
             <div>
-              <h3 class="font-semibold text-gray-900">
-                WhatsApp
-              </h3>
+              <h3 class="font-semibold text-gray-900">WhatsApp</h3>
 
               <a
                 href="https://wa.me/50760578265"
@@ -73,21 +70,18 @@ import Footer from "../components/Footer.astro";
                 6057-8265
               </a>
             </div>
-
           </div>
-
 
           <!-- Correo -->
           <div class="mt-6 flex items-start gap-4">
-
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100"
+            >
               ✉️
             </div>
 
             <div>
-              <h3 class="font-semibold text-gray-900">
-                Correo electrónico
-              </h3>
+              <h3 class="font-semibold text-gray-900">Correo electrónico</h3>
 
               <a
                 href="mailto:transportesperrin@gmail.com"
@@ -96,35 +90,26 @@ import Footer from "../components/Footer.astro";
                 transportesperrin@gmail.com
               </a>
             </div>
-
           </div>
-
 
           <!-- Ubicación -->
           <div class="mt-6 flex items-start gap-4">
-
-            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100"
+            >
               📍
             </div>
 
             <div>
-              <h3 class="font-semibold text-gray-900">
-                Cobertura
-              </h3>
+              <h3 class="font-semibold text-gray-900">Cobertura</h3>
 
-              <p class="mt-1 text-gray-600">
-                Panamá y Panamá Oeste
-              </p>
+              <p class="mt-1 text-gray-600">Panamá y Panamá Oeste</p>
             </div>
-
           </div>
-
         </div>
-
 
         <!-- Formulario -->
         <div class="rounded-2xl border border-gray-200 p-8 shadow-sm">
-
           <h2 class="text-2xl font-semibold text-gray-900">
             Solicitar información
           </h2>
@@ -133,10 +118,7 @@ import Footer from "../components/Footer.astro";
             Completa el formulario y nos pondremos en contacto contigo.
           </p>
 
-
-          <form class="mt-8 space-y-6">
-
-            <!-- Nombre -->
+          <form id="contact-form" class="mt-8 space-y-6">
             <div>
               <label
                 for="nombre"
@@ -150,12 +132,11 @@ import Footer from "../components/Footer.astro";
                 id="nombre"
                 name="nombre"
                 placeholder="Tu nombre"
+                required
                 class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
               />
             </div>
 
-
-            <!-- Teléfono -->
             <div>
               <label
                 for="telefono"
@@ -169,12 +150,11 @@ import Footer from "../components/Footer.astro";
                 id="telefono"
                 name="telefono"
                 placeholder="Tu número de teléfono"
+                required
                 class="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
               />
             </div>
 
-
-            <!-- Servicio -->
             <div>
               <label
                 for="servicio"
@@ -186,26 +166,25 @@ import Footer from "../components/Footer.astro";
               <select
                 id="servicio"
                 name="servicio"
+                required
                 class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-gray-900"
               >
                 <option value="">Selecciona un servicio</option>
-                <option value="veterinario">
+                <option value="Transporte veterinario">
                   Transporte veterinario
                 </option>
-                <option value="esterilizacion">
+                <option value="Transporte para esterilización">
                   Transporte para esterilización
                 </option>
-                <option value="programado">
+                <option value="Traslado programado">
                   Traslado programado
                 </option>
-                <option value="jaulas">
+                <option value="Alquiler de jaulas y transportadoras">
                   Alquiler de jaulas y transportadoras
                 </option>
               </select>
             </div>
 
-
-            <!-- Mensaje -->
             <div>
               <label
                 for="mensaje"
@@ -218,29 +197,56 @@ import Footer from "../components/Footer.astro";
                 id="mensaje"
                 name="mensaje"
                 rows="5"
+                required
                 placeholder="Cuéntanos qué necesitas..."
                 class="mt-2 w-full resize-none rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
               ></textarea>
             </div>
 
-
-            <!-- Botón -->
             <button
               type="submit"
               class="w-full rounded-lg bg-gray-900 px-6 py-3 font-semibold text-white transition hover:bg-gray-700"
             >
-              Enviar solicitud
+              Enviar solicitud por WhatsApp
             </button>
-
           </form>
 
-        </div>
+         
+<script>
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
 
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const datos = new FormData(form);
+
+      const nombre = String(datos.get("nombre") ?? "").trim();
+      const telefono = String(datos.get("telefono") ?? "").trim();
+      const servicio = String(datos.get("servicio") ?? "");
+      const mensaje = String(datos.get("mensaje") ?? "").trim();
+
+      const texto = `Hola, Transportes Perrin. Me gustaría solicitar información sobre sus servicios.
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Servicio: ${servicio}
+
+Mensaje: ${mensaje}`;
+
+      const mensajeCodificado = encodeURIComponent(texto);
+
+      const whatsappURL =
+        `https://wa.me/50760578265?text=${mensajeCodificado}`;
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    });
+  }
+</script>
+        </div>
       </div>
     </section>
-
   </main>
 
   <Footer />
-
 </Layout>
